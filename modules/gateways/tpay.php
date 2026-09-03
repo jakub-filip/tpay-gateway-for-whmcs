@@ -4,28 +4,23 @@ if (!defined('WHMCS')) {
     exit('This file cannot be accessed directly.');
 }
 
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'tpay' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+
+use JakubFilip\Tpay\Actions\MetaDataAction;
+use JakubFilip\Tpay\Actions\ConfigAction;
+use JakubFilip\Tpay\Actions\LinkAction;
+
 function tpay_MetaData(): array
 {
-    return [
-        'DisplayName' => 'Tpay',
-        'APIVersion' => '1.1',
-    ];
+    return (new MetaDataAction())->execute();
 }
 
 function tpay_config(): array
 {
-    return [
-        'FriendlyName' => [
-            'Type' => 'System',
-            'Value' => 'Tpay',
-        ],
-    ];
+    return (new ConfigAction())->execute();
 }
 
 function tpay_link(array $params): string
 {
-    return <<<HTML
-<button type="button" class="btn btn-primary">{$params['langpaynow']}</button>
-HTML;
-
+    return (new LinkAction($params))->execute();
 }

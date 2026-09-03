@@ -1,0 +1,18 @@
+{
+    "name": "jakub-filip/tpay-gateway-for-whmcs",
+    "description": "Tpay payment gateway integration for WHMCS",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakub Filip",
+            "email": "jakubfilip@innovativesoftwarecenter.dev"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "JakubFilip\\Tpay\\": "./"
+        }
+    },
+    "require": {}
+}
