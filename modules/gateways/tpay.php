@@ -9,6 +9,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . 'tpay' . DIRECTORY_SEPARATOR . 'ven
 use JakubFilip\Tpay\Actions\MetaDataAction;
 use JakubFilip\Tpay\Actions\ConfigAction;
 use JakubFilip\Tpay\Actions\LinkAction;
+use JakubFilip\Tpay\Views\TemplateRenderer;
 
 function tpay_MetaData(): array
 {
@@ -22,5 +23,5 @@ function tpay_config(): array
 
 function tpay_link(array $params): string
 {
-    return (new LinkAction($params))->execute();
+    return (new LinkAction(new TemplateRenderer(__DIR__ . DIRECTORY_SEPARATOR . 'tpay' . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR), $params))->execute();
 }
