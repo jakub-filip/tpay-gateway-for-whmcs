@@ -1,0 +1,17 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-gateways",
+  "name": "tpay",
+  "license": "MIT",
+  "category": "payments",
+  "description": {
+    "name": "Tpay",
+    "tagline": "Tpay payment gateway integration for WHMCS"
+  },
+  "authors": [
+    {
+      "name": "Jakub Filip",
+      "homepage": "https:\/\/www.linkedin.com\/in\/-jakub-filip\/"
+    }
+  ]
+}
