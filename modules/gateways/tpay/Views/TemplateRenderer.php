@@ -2,7 +2,7 @@
 
 namespace JakubFilip\Tpay\Views;
 
-use \Exception;
+use Exception;
 
 class TemplateRenderer
 {
