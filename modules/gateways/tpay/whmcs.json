@@ -8,6 +8,9 @@
     "name": "Tpay",
     "tagline": "Tpay payment gateway integration for WHMCS"
   },
+  "logo": {
+    "filename": "tpay-logo-short-navy.png"
+  },
   "authors": [
     {
       "name": "Jakub Filip",
