@@ -11,6 +11,24 @@ class ConfigAction extends AbstractAction
                 'Type' => 'System',
                 'Value' => 'Tpay',
             ],
+            'clientId' => [
+                'FriendlyName' => 'Client ID',
+                'Type' => 'text',
+                'Size' => '100',
+            ],
+            'clientSecret' => [
+                'FriendlyName' => 'Client Secret',
+                'Type' => 'password',
+                'Size' => '100',
+            ],
+            'environment' => [
+                'FriendlyName' => 'Environment',
+                'Type' => 'dropdown',
+                'Options' => [
+                    'sandbox' => 'Sandbox',
+                    'production' => 'Production',
+                ],
+            ],
         ];
     }
 }
