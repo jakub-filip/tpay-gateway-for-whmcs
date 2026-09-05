@@ -174,7 +174,7 @@ try {
     safe_exec($composerDumpAutoloadCommand);
     success('Composer autoload regenerated.');
 
-    info('Composer autoload regenerated.');
+    info('Removing Composer files...');
     unlink($moduleDir . 'composer.json');
     unlink($moduleDir . 'composer.lock');
     success('Composer files removed.');
