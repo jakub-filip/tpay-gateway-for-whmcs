@@ -1,3 +1,6 @@
 /.idea/
 
-/modules/gateways/tpay/vendor/
+/vendor/
+
+/.tmp-build/
+/build/
